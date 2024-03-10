@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "6f116b91-d19a-4cc7-b3dd-78a9fc3ee717",
+		"name": "[六角-node][render]todolist",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24896582"
+	},
+	"item": [
+		{
+			"name": "取得所有 todolist",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://hs-node-2024-practice-todolist.onrender.com/todos",
+					"protocol": "https",
+					"host": [
+						"hs-node-2024-practice-todolist",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增單筆 todo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"todo test1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hs-node-2024-practice-todolist.onrender.com/todos",
+					"protocol": "https",
+					"host": [
+						"hs-node-2024-practice-todolist",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "編輯單筆 todo",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"test1edit\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hs-node-2024-practice-todolist.onrender.com/todos/:uuid",
+					"protocol": "https",
+					"host": [
+						"hs-node-2024-practice-todolist",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"todos",
+						":uuid"
+					],
+					"variable": [
+						{
+							"key": "uuid",
+							"value": "49af022c-7e83-4996-811a-1599593cd2ca"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除單筆 todo",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://hs-node-2024-practice-todolist.onrender.com/todos/:uuid",
+					"protocol": "https",
+					"host": [
+						"hs-node-2024-practice-todolist",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"todos",
+						":uuid"
+					],
+					"variable": [
+						{
+							"key": "uuid",
+							"value": "49af022c-7e83-4996-811a-1599593cd2ca"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "清空所有 todos",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://hs-node-2024-practice-todolist.onrender.com/todos",
+					"protocol": "https",
+					"host": [
+						"hs-node-2024-practice-todolist",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
